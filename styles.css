@@ -2,6 +2,7 @@ body {
 	width: 100%;
 	margin: 0px;
 	background: #DAE3E7;
+	font-family: Helvetica, sans-serif;
 }
 
 .header {
@@ -50,6 +51,12 @@ span.right {
 	float:right;
 }
 
+footer.main {
+	margin-top: 60px;
+	margin-left: 25px;
+	margin-bottom: 5px;
+}
+
 main {
 	margin-top: 20px;
 	margin-right: auto;
@@ -78,7 +85,6 @@ h3.custom {
 }
 
 h4.custom {
-	font-family: Tahoma;
 	margin-top: 0px;
 	margin-bottom: 10px;
 	font-size: 15px;

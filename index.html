@@ -8,9 +8,26 @@
     <meta name="description" content="Description">
     <meta name="author" content="vlad">
 	<link rel="stylesheet" href="styles.css">
+
+	<script>
+		function countTags() {
+			let els = document.body.getElementsByTagName("*");
+			let map = new Map();
+			for (let el of els) {
+				let tag = el.tagName;
+				if (map.has(tag)) {
+					map.set(tag, map.get(tag) + 1);
+				} else {
+					map.set(tag, 1);
+				}
+			}
+
+			console.log(map);
+		}
+	</script>
 </head>
 
-<body>
+<body onload="countTags(document)">
 <header>
 	<div class="header">
 		<div class="text">
@@ -65,7 +82,7 @@
 		
 		<div class="content-block">
 			<h3 class="custom">Формула успеха</h3>
-			Успех = Талант + Трудолюбие<sup>3
+			Успех = Талант + Трудолюбие<sup>3</sup>
 		</div>
 	
 	</div>

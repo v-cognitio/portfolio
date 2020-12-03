@@ -25,6 +25,8 @@
 			console.log(map);
 		}
 	</script>
+
+
 </head>
 
 <body onload="countTags(document)">
@@ -33,13 +35,58 @@
 		<div class="text">
 			<h1 class="name">Влад Сивирин</h1>
 			<h2 class="desc">Студент ИТМО</h2>
+			<div class="contacts">
+				<button id="contButton" class="contacts">Контакты</button>
+			</div>
 		</div>
 		<div class="img">
-			<img src="pic.jpg" class="round">
+			<img src="./pics/pic0.jpg" class="round" id="logo">
 		</div>
+
+		<script>
+			let picNumber = 0;
+			let pic = document.getElementById("logo");
+
+			pic.onclick = function() {
+				picNumber = (picNumber + 1) % 3;
+				pic.src = "./pics/pic" + picNumber + ".jpg";
+
+				if (picNumber === 2) {
+					let audio = new Audio(); // Создаём новый элемент Audio
+					audio.src = './pics/ok.ogg'; // Указываем путь к звуку "клика"
+					audio.autoplay = true;
+				}
+			}
+		</script>
 	</div>
 </header>
 
+
+<div id="contacts" class="modal">
+	<div class="modal-content">
+		<div class="modal-flex">
+			<a href="https://github.com/v-cognitio" class="contacts">GitHub</a>
+			<a href="https://vk.com/ladislavcognitio" class="contacts">VK</a>
+			<a href="https://t.me/v_cognitio" class="contacts">Telegram</a>
+			<a href="https://ru.stackoverflow.com/users/290834" class="contacts">StackOverflow</a>
+		</div>
+		<span class="right">v-cognitio</span>
+	</div>
+</div>
+
+<script>
+	let modal = document.getElementById("contacts");
+	let button = document.getElementById("contButton");
+
+	button.onclick = function() {
+		modal.style.display = "block";
+	}
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
+</script>
 
 	
 <main>
@@ -121,11 +168,10 @@
 			</blockquote>
 		</div>
 		
-		
 	</aside>
 </main>
 
-
+<!--
 <footer class="main">
 	<div>
 		<a href="https://github.com/v-cognitio">GitHub | </a>
@@ -133,6 +179,7 @@
 		<a href="https://t.me/v_cognitio">Telegram</a>
 	</div>
 </footer>
+-->
 
 </body>
     

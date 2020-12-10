@@ -134,14 +134,19 @@ div.modal-flex {
 }
 
 button.contacts {
+	display: flex;
 	font-family: inherit;
 	background-color: #f5f5f5;
 	border-radius: 12px;
 	font-size: 16px;
 	border: 2px solid #434343;
 	padding-bottom: 3px;
+	cursor: pointer;
 }
 
 div.contacts {
+	display: flex;
+	width: 12%;
+	justify-content: space-between;
 	padding-top: 8px;
 }

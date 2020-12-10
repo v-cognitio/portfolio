@@ -1,0 +1,81 @@
+div.chatBox {
+    float: right;
+    height: 700px;
+    width: 30%;
+    background: #25221b;
+}
+
+div.messages {
+    margin: 5px auto 0;
+    padding-bottom: 5px;
+    height: 93%;
+    width: 95%;
+    border: darksalmon solid 2px;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+div.messages::-webkit-scrollbar {
+    display: none;
+}
+
+div.inputBox {
+    margin: 8px auto;
+    width: 95%;
+}
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+div.inMessage {
+    float: left;
+    display: grid;
+    width: 70%;
+    margin-top: 5px;
+    margin-left: 5px;
+    background: #daa520;
+    border-radius: 15px;
+
+}
+
+div.outMessage {
+    float: right;
+    display: grid;
+    width: 70%;
+    margin-top: 5px;
+    margin-right: 5px;
+    background: #a98307;
+    border-radius: 15px;
+}
+
+div.inMessage p {
+    margin: 15px 5px 15px 15px;
+}
+
+div.outMessage p {
+    margin: 15px 5px 15px 15px;
+}
+
+div.messageContent {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.closeContent {
+    align-self: center;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    height: 100%;
+    width: 20px;
+    border-left: #021940 solid 2px;
+    text-align: center;
+}
+
+span.close {
+    display: inline-block;
+}

@@ -37,11 +37,19 @@
 			<h2 class="desc">Студент ИТМО</h2>
 			<div class="contacts">
 				<button id="contButton" class="contacts">Контакты</button>
+				<button id="chatButton" class="contacts">Чатик</button>
 			</div>
 		</div>
 		<div class="img">
 			<img src="./pics/pic0.jpg" class="round" id="logo">
 		</div>
+
+		<script>
+			let chatButton = document.getElementById("chatButton");
+			chatButton.onclick = function () {
+				window.location.href = 'lab7/lab7.html';
+			}
+		</script>
 
 		<script>
 			let picNumber = 0;
@@ -52,8 +60,8 @@
 				pic.src = "./pics/pic" + picNumber + ".jpg";
 
 				if (picNumber === 2) {
-					let audio = new Audio(); // Создаём новый элемент Audio
-					audio.src = './pics/ok.ogg'; // Указываем путь к звуку "клика"
+					let audio = new Audio();
+					audio.src = './pics/ok.ogg';
 					audio.autoplay = true;
 				}
 			}
